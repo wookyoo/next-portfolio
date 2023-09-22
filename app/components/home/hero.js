@@ -5,7 +5,7 @@ export default function Hero() {
     return (
         <>
             <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 dark:text-white">Hello, It's Me!
+                <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 dark:text-white">Hello, It&apos;s Me!
                 <br className="hidden lg:inline-block"/>Have a nice day
                 </h1>
                 <p className="mb-8 leading-relaxed">I craft digital experiences that blend elegance and functionality, weaving code into seamless user stories.</p>
