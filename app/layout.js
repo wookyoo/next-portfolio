@@ -32,17 +32,19 @@ export default function RootLayout({ children }) {
         </header>
 
         
-        <main className="flex min-h-screen flex-col items-center justify-between p-24">
+        {/* <main className="flex min-h-screen flex-col items-center justify-between p-24">
           <section className="text-gray-600 body-font">
                 <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
 
-                  {children}
+                  
 
                 </div>
             </section>
-        </main>
+        </main> */}
+
+        {children}
         
-        <footer className="text-gray-600 body-font">
+        <footer className="text-gray-600 body-font sm:pt-6 ">
           <div className="bg-gray-100">
             <div className="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
               <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
