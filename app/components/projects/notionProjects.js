@@ -1,4 +1,4 @@
-import { TOKEN, DATABASE_ID } from "../../lib/config.js";
+// import { TOKEN, DATABASE_ID } from "../../lib/config.js";
 import ProjectItem from "./project-item.js";
 
 
@@ -18,6 +18,9 @@ export default async function NotionProjects() {
 
 // called at build stage
 export async function getData() {
+
+    var TOKEN = process.env.NOTION_TOKEN;
+    var DATABASE_ID = process.env.NOTION_DATABASE_ID;
 
     const options = {
         method: 'POST',
