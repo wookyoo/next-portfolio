@@ -24,7 +24,7 @@ export default async function ProjectItem({data}) {
                         : ''
                 }
                 <div className="flex items-center gap-x-4 text-xs">
-                    <time className="text-gray-500">Mar 16, 2020</time>
+                    <time className="text-gray-500"></time>
                 </div>
                 <div className="group relative">
                 <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
