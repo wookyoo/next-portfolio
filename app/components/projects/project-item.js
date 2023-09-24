@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
-export default function ProjectItem({data}) {
+export default async function ProjectItem({data}) {
+
     // console.log(data.properties.Description.rich_text)
 
     const title = data.properties.Name.title[0].plain_text
@@ -9,6 +10,8 @@ export default function ProjectItem({data}) {
     const tags = data.properties.Tags.multi_select
     const workType = data.properties.Name.title[0].plain_text
     const link = data.properties.Name.title[0].plain_text
+
+    
 
     return (
         <div className="project-card p-4">
