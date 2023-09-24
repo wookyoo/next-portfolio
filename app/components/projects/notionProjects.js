@@ -9,9 +9,9 @@ export default async function NotionProjects() {
 
     return (
         <>
-            {data.results.map((project) => (
+            {data.results ? data.results.map((project) => (
                 <ProjectItem key={project.id} data={project}/>
-            ))}
+            )) : null}
         </>
     )
 }
