@@ -1,4 +1,4 @@
-import { TOKEN, DATABASE_ID } from "../../config";
+import { TOKEN, DATABASE_ID } from "../lib/config.js";
 import ProjectItem from "../components/projects/project-item";
 
 
