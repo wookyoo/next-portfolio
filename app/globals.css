@@ -39,6 +39,10 @@ footer {
           hover:text-blue-600
 }
 
+.header-layout {
+  
+}
+
 .tag-gap {
   column-gap: 0.5rem;
   row-gap: 0.5rem;
@@ -80,4 +84,82 @@ footer {
 .tag_default {
   color: rgb(50, 48, 44);
   background: rgba(227, 226, 224, 0.5);
+}
+
+.about-me-bg-left{
+  background: linear-gradient(
+    to right, 
+    rgb(230 218 206) 0%,
+    rgb(230 218 206) 33%,
+    white 33%,
+    white 100%
+  );
+}
+
+.business-card{
+  border-radius: var(--rd,5px);
+  /* box-shadow: var(--shd,0 1px 4px rgba(0,0,0,.6)); */
+  box-shadow: var(--shd, -5px 5px 20px -2px rgba(0,0,0,.6));
+  height: auto;
+  width: 375px;
+  background: rgba(244,236,230);
+}
+
+.business-card-photo {
+  height: 235px;
+  width: 205px;
+  margin: 43px 0px 34px 0;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.business-card-name {
+  width: 277px;
+  line-height: 1.2em;
+  text-align: center;
+  font-size: 27px;
+  font: normal normal bold 27px/1.4em poppins-semibold,poppins,sans-serif;
+  color: rgb(0,0,0);
+  margin: 0px 0px 25px 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.business-card-dash {
+  width: 50px;
+  height: 5px;
+  background: rgb(0,80,255);
+  margin: 0px 0px 25px 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.business-card-occupation {
+  width: 277px;
+  line-height: 1.2em;
+  text-align: center;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 17px;
+  letter-spacing: 0.25em;
+  margin: 0px 0px 51px 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.business-card-bottom {
+  background: white;
+  height: 25px;
+}
+.business-card-icons {
+  position: relative;
+  margin: 14px 0px 14px 0;
+}
+
+.about-me-message {
+  --min-height: 150px;
+  height: auto;
+  width: 485px;
 }

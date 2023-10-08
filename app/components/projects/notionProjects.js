@@ -4,8 +4,7 @@ import ProjectItem from "./project-item.js";
 
 export default async function NotionProjects() {
     const data = await getData()
-
-    console.log(data);
+    // console.log(data);
 
     return (
         <>

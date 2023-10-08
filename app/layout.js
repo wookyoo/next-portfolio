@@ -1,32 +1,48 @@
+'use client'
+
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
+// import Providers from './providers'
+// import ThemeSwitcher from './ThemeSwitcher'
+import { usePathname } from 'next/navigation'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
-  title: 'Wookyoo Portfolio',
-  description: 'Personal Web portfolio',
-}
-
 export default function RootLayout({ children }) {
+  
+  const pathname  = usePathname()
+
+  const navLink = [
+    {name: "Home", link: "/",},
+    {name: "Project", link: "/projects",},
+    {name: "About", link: "/about-me",}
+  ]
+
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <title>Wookyoo Portfolio</title>
+        <meta name='description' content='Personal Web portfolio' />
+      </head>
       <body>
-
-        <header className="">
+        <header className="header-layout bg-gradient-to-b from-orange-100 to-30%">
           <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
             <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-              </svg>
-              <span className="dark:text-white ml-3 text-xl">Wookyoo Kang</span>
+              <span className="dark:text-white ml-3 text-2xl font-mono">Wookyoo Kang</span>
             </a>
             <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-              <Link href="/" className="mr-5 hover:text-gray-900">Home</Link>
+              {navLink.map(({link, name}) => (
+                <Link key={name} href={link} className={`${pathname  === link ? 'border-blue-500 rounded py-1 px-3 bg-blue-500 text-white hover:bg-blue-700' : 'hover:text-blue-500'} inline-block mr-5`}>
+                  {name}
+                </Link>
+              ))}
+              {/*
+              <Link href="/" className={`link ${pathname === '/' ? 'active mr-5 hover:text-gray-900' : 'mr-5 hover:text-gray-900'}`}>Home</Link>
               <Link href="/projects" className="mr-5 hover:text-gray-900">Project</Link>
-              <a className="mr-5 hover:text-gray-900">About</a>
-              <Link href="/contact" className="mr-5 hover:text-gray-900">Contact</Link>
+              <Link href="/about-me" className="mr-5 hover:text-gray-900">About</Link >
+               */}
+              {/* <Link href="/contact" className="mr-5 hover:text-gray-900">Contact</Link> */}
             </nav>
           </div>
         </header>
@@ -42,15 +58,16 @@ export default function RootLayout({ children }) {
             </section>
         </main> */}
 
+        {/* <Providers>
+          <ThemeSwitcher> {children} </ThemeSwitcher>
+        </Providers> */}
+
         {children}
         
         <footer className="text-gray-600 body-font sm:pt-6 ">
           <div className="bg-gray-100">
             <div className="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
-              <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-                <span className="ml-3 text-xl">Wookyoo Kang Portfolio</span>
-              </a>
-              <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">© 2023 full-stack developerrrrs
+              <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">© 2023 by Full-stack Java Developers <br/> Powered and secured by Wookyoo Kang
               </p>
               <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
                 <a className="ml-3 text-gray-500" href="https://github.com/wookyoo" target="_blank">
@@ -68,7 +85,6 @@ export default function RootLayout({ children }) {
             </div>
           </div>
         </footer>
-
       </body>
     </html>
   )
