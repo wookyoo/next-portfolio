@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function AboutMe() {
 
-    const imgUrl = '/wookyoo_kang_photo.jpg'
+    const imgUrl = '/wookyoo_kang_photo_update.jpg'
 
     return (
         <main className="flex min-h-screen flex-col items-center justify-between about-me-bg-left">
